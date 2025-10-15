@@ -5,7 +5,7 @@ A TypeScript utility package with mathematical functions and type definitions.
 ## Installation
 
 ```bash
-npm install npm_package_demo
+npm install luongtd_npm_package_demo
 ```
 
 ## Usage
@@ -13,7 +13,7 @@ npm install npm_package_demo
 ### ESM (Recommended)
 
 ```javascript
-import { sum, DemoParamsType } from "npm_package_demo"
+import { sum, DemoParamsType } from "luongtd_npm_package_demo"
 
 // Use the sum function
 const result = sum(5, 3) // 8
@@ -28,7 +28,7 @@ const user: DemoParamsType = {
 ### CommonJS
 
 ```javascript
-const { sum, DemoParamsType } = require("npm_package_demo")
+const { sum, DemoParamsType } = require("luongtd_npm_package_demo")
 
 const result = sum(5, 3) // 8
 ```
