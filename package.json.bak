@@ -1,0 +1,42 @@
+{
+  "name": "npm_package_demo",
+  "version": "1.0.0",
+  "description": "A demo package for testing npm package",
+  "type": "module",
+  "main": "dist/cjs/index.cjs.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist",
+    "build:ts": "tsc",
+    "build:esm": "npm run build:ts && node ./scripts/copy-esm.js",
+    "minify:cjs": "node ./scripts/minify-cjs.js",
+    "build": "npm run clean && npm run build:ts && npm run minify:cjs",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luong-Dev/npm_package_demo.git"
+  },
+  "keywords": [
+    "typescript",
+    "utility",
+    "math",
+    "sum",
+    "demo"
+  ],
+  "author": "ducluongwebdev@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Luong-Dev/npm_package_demo/issues"
+  },
+  "homepage": "https://github.com/Luong-Dev/npm_package_demo#readme",
+  "devDependencies": {
+    "terser": "^5.44.0",
+    "typescript": "^5.9.3"
+  }
+}
